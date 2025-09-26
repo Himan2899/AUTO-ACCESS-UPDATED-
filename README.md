@@ -5,14 +5,12 @@
 > *One Click. Infinite Accessibility.*
 > AutoAccess makes any website instantly accessible for 1.3 billion differently-abled people worldwide — with AI-powered assistance, live captions, voice interaction, and inclusive design tools.
 
----
 
 ## 🚀 Overview
 
 AutoAccess is a **Chrome Extension (Manifest V3)** that transforms any website into an **inclusive, barrier-free experience**.
 With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Image Labeling with OCR, Text-to-Speech, Voice Commands, Smart Contrast Fixes, Accessibility Score Badge, Heatmap Overlay, Live Captions, and Profile-based settings**, AutoAccess ensures accessibility is **instant, universal, and empowering**.
 
----
 
 ## ✨ Core Features
 
@@ -30,7 +28,7 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 * Generates a **downloadable accessibility report** (PDF + JSON)
 
 
-### 2. AI Chat Assistant
+### 2. ⭐ AI Chat Assistant
 
 * Context-aware chatbot injected into every webpage
 * Example commands:
@@ -41,21 +39,21 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 * Responds with **confidence levels + provenance (local/OpenAI/HuggingFace)**
 * Optional **TTS playback**
 
-### 4. AI Image Labeling + OCR
+### 3. ⭐ AI Image Labeling + OCR
 
 * Detects unlabeled images
 * Uses **Tesseract.js (local OCR)** + optional APIs (OpenAI/HuggingFace)
 * Generates intelligent alt text → user can **edit & apply**
 * Updates DOM with accessible attributes
 
-### 5. Text-to-Speech (TTS)
+### 4. ⭐ Text-to-Speech (TTS)
 
 * Reads aloud selected or full-page text
 * Word-by-word **highlight sync** for dyslexic/blind users
 * Multiple voices (browser TTS + optional OpenAI/ElevenLabs)
 * Shortcut: **Alt+R**
 
-### 6. Speech-to-Text (STT) / Voice Commands
+### 5. ⭐ Speech-to-Text (STT) / Voice Commands
 
 * Voice-powered browsing & navigation
 * Supported commands:
@@ -65,13 +63,13 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
   * Reading: “Read this page”
 * Built on **Web Speech API** (local, privacy-first)
 
-### 7. Smart Contrast Fixer
+### 6. ⭐ Smart Contrast Fixer
 
 * Improves text readability with **WCAG 2.1 AA compliant colors**
 * Presets for color-blindness (Protanopia, Deuteranopia, Tritanopia)
 * Preserves brand identity while ensuring compliance
 
-### 8. Enhanced Keyboard Navigation
+### 7. ⭐ Enhanced Keyboard Navigation
 
 * Logical tab order for focusable elements
 * Injects skip links for main content
@@ -79,13 +77,12 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 * SPA route-change support
 
 
-### 9. 👤 Accessibility Profiles
+### 8. 👤 Accessibility Profiles
 
 * Predefined profiles: **Blind**, **Low Vision**, **Dyslexic**, **Default**
 * Each profile optimizes features for that disability (e.g., Blind → TTS priority, Dyslexic → simplified fonts, Low Vision → high contrast)
 * **Custom profiles** + site-specific overrides
 
----
 
 ## 🏗️ Tech Stack
 
@@ -125,7 +122,6 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 * **Keys encrypted locally** — Never uploaded
 * **Open source** — Transparent & auditable
 
----
 
 ## 📦 Installation
 
@@ -136,7 +132,6 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 3. Click **Load unpacked** → select extension folder
 4. Configure settings & API keys (optional) in Options
 
----
 
 ## 💰 Business Model
 
@@ -162,7 +157,6 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 * Early access to new features
 * Dedicated support + enterprise analytics
 
----
 
 ## 🏆 Why AutoAccess Wins
 
@@ -171,7 +165,6 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 * **Privacy-First** (local-first, encrypted keys, opt-in AI)
 * **Universal Value** (users + developers + enterprises)
 
----
 
-✨ *AutoAccess isn’t just another extension — it’s the future of universal, barrier-free web accessibility.*
+✨ *AutoAccess isn’t just another extension — it’s the future of universal, barrier-free web accessibility.
 
