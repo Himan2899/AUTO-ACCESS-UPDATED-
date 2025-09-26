@@ -1,120 +1,177 @@
-# 🌐 AutoAccess — Next-Gen Web Accessibility Chrome Extension  
 
-> *One Click. Infinite Accessibility.*  
-> AutoAccess makes any website instantly accessible for 1.3 billion differently-abled people worldwide — with AI-powered assistance, voice interaction, and inclusive design tools.  
 
----
+# 🌐 AutoAccess — Next-Gen Web Accessibility Chrome Extension
 
-## 🚀 Overview  
-
-AutoAccess is a *Chrome Extension (Manifest V3)* that transforms any website into an *inclusive and accessible experience*.  
-With features like *AI Chat Assistant, OCR-based Image Labeling, Text-to-Speech, Voice Commands, Smart Contrast Fixes, Global Accessibility Mode, and Enhanced Keyboard Navigation, AutoAccess ensures **barrier-free browsing* for everyone.  
+> *One Click. Infinite Accessibility.*
+> AutoAccess makes any website instantly accessible for 1.3 billion differently-abled people worldwide — with AI-powered assistance, live captions, voice interaction, and inclusive design tools.
 
 ---
 
-## ✨ Core Features  
+## 🚀 Overview
 
-### 1. 🌍 One-Click Global Accessibility Mode  
-- Runs a full *axe-core accessibility audit*.  
-- Automatically applies *safe fixes*:  
-  - Missing alt text placeholders  
-  - ARIA labels for forms & buttons  
-  - Heading hierarchy correction  
-  - Smart contrast adjustments  
-  - Skip links for keyboard navigation  
-- Provides a *Before/After visual diff*.  
-- Generates a *downloadable accessibility report* (PDF + JSON).  
+AutoAccess is a **Chrome Extension (Manifest V3)** that transforms any website into an **inclusive, barrier-free experience**.
+With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Image Labeling with OCR, Text-to-Speech, Voice Commands, Smart Contrast Fixes, Accessibility Score Badge, Heatmap Overlay, Live Captions, and Profile-based settings**, AutoAccess ensures accessibility is **instant, universal, and empowering**.
 
 ---
 
-### 2. AI Chat Assistant  
-- Context-aware chatbot integrated in every webpage.  
-- Use-cases:  
-  - “Summarize this article”  
-  - “Describe this image”  
-  - “Why is this button inaccessible?”  
-- Responds with *confidence levels + provenance (local/OpenAI/HF)*.  
-- Optional *Text-to-Speech playback*.  
+## ✨ Core Features
+
+### 1. 🌍 One-Click Global Accessibility Mode
+
+* Runs a full **axe-core accessibility audit**
+* Automatically applies **safe fixes**:
+
+  * Placeholder alt text for images
+  * ARIA labels for forms & buttons
+  * Heading hierarchy correction
+  * Smart color contrast adjustments
+  * Skip links for keyboard navigation
+* Provides a **Before/After visual diff**
+* Generates a **downloadable accessibility report** (PDF + JSON)
+
+
+### 2. AI Chat Assistant
+
+* Context-aware chatbot injected into every webpage
+* Example commands:
+
+  * “Summarize this article”
+  * “Describe this image”
+  * “Why is this button inaccessible?”
+* Responds with **confidence levels + provenance (local/OpenAI/HuggingFace)**
+* Optional **TTS playback**
+
+### 4. AI Image Labeling + OCR
+
+* Detects unlabeled images
+* Uses **Tesseract.js (local OCR)** + optional APIs (OpenAI/HuggingFace)
+* Generates intelligent alt text → user can **edit & apply**
+* Updates DOM with accessible attributes
+
+### 5. Text-to-Speech (TTS)
+
+* Reads aloud selected or full-page text
+* Word-by-word **highlight sync** for dyslexic/blind users
+* Multiple voices (browser TTS + optional OpenAI/ElevenLabs)
+* Shortcut: **Alt+R**
+
+### 6. Speech-to-Text (STT) / Voice Commands
+
+* Voice-powered browsing & navigation
+* Supported commands:
+
+  * Navigation: “Scroll down”, “Next link”, “Go back”
+  * Interaction: “Click buy now”, “Add to cart”
+  * Reading: “Read this page”
+* Built on **Web Speech API** (local, privacy-first)
+
+### 7. Smart Contrast Fixer
+
+* Improves text readability with **WCAG 2.1 AA compliant colors**
+* Presets for color-blindness (Protanopia, Deuteranopia, Tritanopia)
+* Preserves brand identity while ensuring compliance
+
+### 8. Enhanced Keyboard Navigation
+
+* Logical tab order for focusable elements
+* Injects skip links for main content
+* Adds **visual focus indicators**
+* SPA route-change support
+
+
+### 9. 👤 Accessibility Profiles
+
+* Predefined profiles: **Blind**, **Low Vision**, **Dyslexic**, **Default**
+* Each profile optimizes features for that disability (e.g., Blind → TTS priority, Dyslexic → simplified fonts, Low Vision → high contrast)
+* **Custom profiles** + site-specific overrides
 
 ---
 
-### 3. AI Image Labeling + OCR  
-- Detects images without alt text.  
-- Uses *Tesseract.js OCR* (local) or *OpenAI/HuggingFace* (cloud, optional) for captioning.  
-- Provides AI-generated description → User can *edit & apply*.  
-- Updates DOM with accessible alt attributes.  
+## 🏗️ Tech Stack
+
+### 🔹 Core Technologies
+
+* **Chrome Extension MV3** — Secure extension architecture
+* **React + TypeScript** — Popup & options UI
+* **Tailwind CSS** — Modern responsive styling
+* **JavaScript/TS** — Content scripts, accessibility fixes
+
+### 🔹 Build & Tools
+
+* **Vite / Webpack 5** — Bundling
+* **ESLint + Prettier** — Code quality
+* **Jest + Playwright** — Testing
+
+### 🔹 Accessibility Libraries
+
+* **axe-core** — Accessibility auditing
+* **Tesseract.js** — Local OCR
+* **Web Speech API** — TTS + STT (local fallback)
+* **Optional APIs:** OpenAI, HuggingFace, AssemblyAI, ElevenLabs
+
+### 🔹 Security
+
+* **CSP** — Prevents script injection
+* **Encrypted storage** — API keys saved securely
+* **Local-first design** — No data leaves browser unless user opts in
 
 ---
 
-### 4. Text-to-Speech (TTS)  
-- Reads aloud any text on webpage.  
-- Word-by-word *highlight sync* for dyslexic/blind users.  
-- Multiple voice options (Browser TTS + optional premium voices).  
-- Shortcut: Alt+R (start/pause reading).  
+## 🔒 Privacy & Security
+
+* **Local-first architecture** — Core features (audit, OCR, TTS, STT, contrast fixes) work without internet
+* **Cloud AI (optional)** — OpenAI / HuggingFace / AssemblyAI with user API keys
+* **No personal data collection** — No tracking of URLs or content
+* **Keys encrypted locally** — Never uploaded
+* **Open source** — Transparent & auditable
 
 ---
 
-### 5. Speech-to-Text (STT) / Voice Commands  
-- Voice-powered browsing & navigation.  
-- Supported commands:  
-  - *Navigation:* “Scroll down”, “Next link”, “Go back”  
-  - *Interaction:* “Click buy now”, “Add to cart”  
-  - *Reading:* “Read this page”  
-- Implemented with *Web Speech API* (local).  
+## 📦 Installation
+
+### For Users
+
+1. Clone repo or download ZIP → extract
+2. Open `chrome://extensions/` → enable Developer Mode
+3. Click **Load unpacked** → select extension folder
+4. Configure settings & API keys (optional) in Options
 
 ---
 
-### 6. Smart Contrast Fixer  
-- Improves text readability with *WCAG 2.1 AA compliant colors*.  
-- Includes *color-blind presets*: Protanopia, Deuteranopia, Tritanopia.  
-- Preserves brand colors while ensuring accessibility.  
+## 💰 Business Model
+
+### 🆓 Free Plan
+
+* Basic audit + report
+* Standard contrast fixes
+* 10 image labelings/day
+* Community support
+
+### 💎 Monthly ($9.99)
+
+* Unlimited audits + reports
+* Unlimited image labeling
+* Full AI Chat Assistant
+* Advanced profiles + customization
+* Priority support
+
+### 👑 Yearly ($99.99)
+
+* All monthly features
+* 2 months free
+* Early access to new features
+* Dedicated support + enterprise analytics
 
 ---
 
-### 7. Enhanced Keyboard Navigation  
-- Logical tab order for all focusable elements.  
-- Injects skip links for main content.  
-- Adds *visual focus indicators*.  
-- SPA (single-page-app) route change support with MutationObserver.  
+## 🏆 Why AutoAccess Wins
+
+* **Instant Fixes + Measurable Proof** (Global Mode, Score Badge, Heatmap)
+* **Truly Inclusive** (Blind, Low Vision, Dyslexic, Deaf/HOH profiles)
+* **Privacy-First** (local-first, encrypted keys, opt-in AI)
+* **Universal Value** (users + developers + enterprises)
 
 ---
 
-## 🏗 Tech Stack  
-
-### 🔹 Core Technologies  
-- *React 18* — UI framework for modular components.  
-- *TypeScript* — Strong typing for scalable codebase.  
-- *Tailwind CSS* — Utility-first responsive styling.  
-- *Chrome Extension Manifest V3* — Secure extension architecture.  
-
-### 🔹 Accessibility & Auditing  
-- *axe-core* — Industry-standard accessibility audit engine.  
-- *html2canvas* — For Before/After visual diff.  
-- *jsPDF* — For generating downloadable PDF reports.  
-
-### 🔹 AI & OCR  
-- *Tesseract.js* — Local OCR engine for extracting text from images.  
-- *OpenAI GPT-4 (optional)* — Image captions, chatbot, TTS/STT (requires API key).  
-- *HuggingFace Inference API (optional)* — Open-source AI models for captions/summaries.  
-
-### 🔹 Voice & Speech  
-- *Web Speech API* — Speech-to-Text (STT).  
-- *SpeechSynthesis API* — Text-to-Speech (TTS).  
-- *ElevenLabs / OpenAI TTS (optional)* — Premium voices.  
-
-### 🔹 Security  
-- *CSP (Content Security Policy)* — Prevents script injection attacks.  
-- *Web Crypto API (AES-GCM)* — Encrypts API keys & sensitive settings.  
-- *chrome.storage.local* — Secure storage for profiles and reports.  
-
----
-
-## 🔒 Privacy & Security  
-
-- *Local-first architecture* — all features work locally.  
-- *Cloud AI (optional)* — enabled only with user consent + API keys.  
-- *API keys encrypted* with AES-GCM before storage.  
-- *No personal data collection* — extension never tracks URLs or page content.  
-
-
+✨ *AutoAccess isn’t just another extension — it’s the future of universal, barrier-free web accessibility.*
 
