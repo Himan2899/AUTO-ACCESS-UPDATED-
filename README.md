@@ -1,148 +1,120 @@
-# AutoAccess Browser Extension
+# 🌐 AutoAccess — Next-Gen Web Accessibility Chrome Extension  
 
-AutoAccess is a powerful browser extension that enhances web accessibility for disabled individuals through AI-powered features. The extension automatically improves websites by adding image descriptions, adjusting color contrast, and enabling voice navigation.
+> *One Click. Infinite Accessibility.*  
+> AutoAccess makes any website instantly accessible for 1.3 billion differently-abled people worldwide — with AI-powered assistance, voice interaction, and inclusive design tools.  
 
-## Features
+---
 
-### AI Image Labeling
-- Automatically generates descriptive alt text for images
-- Uses Azure Vision API for accurate image recognition
-- Supports multiple languages
-- Configurable confidence threshold
+## 🚀 Overview  
 
-### Color Contrast Enhancement
-- Automatically adjusts color contrast to meet WCAG standards
-- Supports both AA (4.5:1) and AAA (7:1) compliance levels
-- Real-time color adjustments
-- Customizable color schemes
+AutoAccess is a *Chrome Extension (Manifest V3)* that transforms any website into an *inclusive and accessible experience*.  
+With features like *AI Chat Assistant, OCR-based Image Labeling, Text-to-Speech, Voice Commands, Smart Contrast Fixes, Global Accessibility Mode, and Enhanced Keyboard Navigation, AutoAccess ensures **barrier-free browsing* for everyone.  
 
-### Voice Navigation
-- Hands-free website navigation
-- Voice commands for scrolling, zooming, and navigation
-- Text-to-speech for reading content
-- Multiple language support
-- Customizable voice commands
+---
 
-## Installation
+## ✨ Core Features  
 
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/autoaccess.git
-```
+### 1. 🌍 One-Click Global Accessibility Mode  
+- Runs a full *axe-core accessibility audit*.  
+- Automatically applies *safe fixes*:  
+  - Missing alt text placeholders  
+  - ARIA labels for forms & buttons  
+  - Heading hierarchy correction  
+  - Smart contrast adjustments  
+  - Skip links for keyboard navigation  
+- Provides a *Before/After visual diff*.  
+- Generates a *downloadable accessibility report* (PDF + JSON).  
 
-2. Open Chrome and navigate to `chrome://extensions/`
+---
 
-3. Enable "Developer mode" in the top right
+### 2. 🤖 AI Chat Assistant  
+- Context-aware chatbot integrated in every webpage.  
+- Use-cases:  
+  - “Summarize this article”  
+  - “Describe this image”  
+  - “Why is this button inaccessible?”  
+- Responds with *confidence levels + provenance (local/OpenAI/HF)*.  
+- Optional *Text-to-Speech playback*.  
 
-4. Click "Load unpacked" and select the extension directory
+---
 
-## Configuration
+### 3. 🖼 AI Image Labeling + OCR  
+- Detects images without alt text.  
+- Uses *Tesseract.js OCR* (local) or *OpenAI/HuggingFace* (cloud, optional) for captioning.  
+- Provides AI-generated description → User can *edit & apply*.  
+- Updates DOM with accessible alt attributes.  
 
-1. Open the extension options by right-clicking the extension icon and selecting "Options"
+---
 
-2. Configure your Azure Vision API credentials:
-   - Enter your API Key
-   - Enter your API Endpoint
+### 4. 🔊 Text-to-Speech (TTS)  
+- Reads aloud any text on webpage.  
+- Word-by-word *highlight sync* for dyslexic/blind users.  
+- Multiple voice options (Browser TTS + optional premium voices).  
+- Shortcut: Alt+R (start/pause reading).  
 
-3. Customize feature settings:
-   - Enable/disable features
-   - Adjust confidence thresholds
-   - Select WCAG compliance level
-   - Choose voice command language
+---
 
-## Usage
+### 5. 🎤 Speech-to-Text (STT) / Voice Commands  
+- Voice-powered browsing & navigation.  
+- Supported commands:  
+  - *Navigation:* “Scroll down”, “Next link”, “Go back”  
+  - *Interaction:* “Click buy now”, “Add to cart”  
+  - *Reading:* “Read this page”  
+- Implemented with *Web Speech API* (local).  
 
-### Basic Usage
-1. Click the extension icon to open the popup
-2. Toggle features on/off using the switches
-3. Access settings through the options menu
+---
 
-### Voice Commands
-- "Scroll up/down" - Scroll the page
-- "Zoom in/out" - Adjust zoom level
-- "Go to [link text]" - Navigate to a link
-- "Read this" - Read selected text
-- "Focus [element]" - Focus on a specific element
+### 6. 🎨 Smart Contrast Fixer  
+- Improves text readability with *WCAG 2.1 AA compliant colors*.  
+- Includes *color-blind presets*: Protanopia, Deuteranopia, Tritanopia.  
+- Preserves brand colors while ensuring accessibility.  
 
-## Premium Features
+---
 
-### Free Plan
-- Basic image labeling
-- Standard color contrast
-- Limited voice commands
-- Community support
+### 7. ⌨ Enhanced Keyboard Navigation  
+- Logical tab order for all focusable elements.  
+- Injects skip links for main content.  
+- Adds *visual focus indicators*.  
+- SPA (single-page-app) route change support with MutationObserver.  
 
-### Monthly Plan ($9.99/month)
-- Advanced image labeling
-- Custom color schemes
-- Unlimited voice commands
-- Priority support
-- Ad-free experience
+---
 
-### Yearly Plan ($99.99/year)
-- All monthly features
-- Early access to new features
-- 2 months free
-- Dedicated support
-- Custom integrations
+## 🏗 Tech Stack  
 
-## Development
+### 🔹 Core Technologies  
+- *React 18* — UI framework for modular components.  
+- *TypeScript* — Strong typing for scalable codebase.  
+- *Tailwind CSS* — Utility-first responsive styling.  
+- *Chrome Extension Manifest V3* — Secure extension architecture.  
 
-### Project Structure
-```
-autoaccess/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── content.js
-├── background.js
-├── options.html
-├── options.js
-├── payment.js
-├── config.js
-├── success.html
-├── cancel.html
-├── pricing.html
-└── styles/
-    ├── popup.css
-    └── options.css
-```
+### 🔹 Accessibility & Auditing  
+- *axe-core* — Industry-standard accessibility audit engine.  
+- *html2canvas* — For Before/After visual diff.  
+- *jsPDF* — For generating downloadable PDF reports.  
 
-### Building from Source
-1. Install dependencies:
-```bash
-npm install
-```
+### 🔹 AI & OCR  
+- *Tesseract.js* — Local OCR engine for extracting text from images.  
+- *OpenAI GPT-4 (optional)* — Image captions, chatbot, TTS/STT (requires API key).  
+- *HuggingFace Inference API (optional)* — Open-source AI models for captions/summaries.  
 
-2. Build the extension:
-```bash
-npm run build
-```
+### 🔹 Voice & Speech  
+- *Web Speech API* — Speech-to-Text (STT).  
+- *SpeechSynthesis API* — Text-to-Speech (TTS).  
+- *ElevenLabs / OpenAI TTS (optional)* — Premium voices.  
 
-3. Load the extension in Chrome as described in the Installation section
+### 🔹 Security  
+- *CSP (Content Security Policy)* — Prevents script injection attacks.  
+- *Web Crypto API (AES-GCM)* — Encrypts API keys & sensitive settings.  
+- *chrome.storage.local* — Secure storage for profiles and reports.  
 
-## Contributing
+---
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+## 🔒 Privacy & Security  
 
-## License
+- *Local-first architecture* — all features work locally.  
+- *Cloud AI (optional)* — enabled only with user consent + API keys.  
+- *API keys encrypted* with AES-GCM before storage.  
+- *No personal data collection* — extension never tracks URLs or page content.  
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
 
-For support, please:
-1. Check the [documentation](docs/)
-2. Open an issue on GitHub
-3. Contact support@autoaccess.com
-
-## Acknowledgments
-
-- Azure Vision API for image recognition
-- Web Speech API for voice commands
-- Chrome Extension APIs
-- WCAG guidelines for accessibility standards 
