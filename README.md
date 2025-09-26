@@ -27,7 +27,7 @@ With features like *AI Chat Assistant, OCR-based Image Labeling, Text-to-Speech,
 
 ---
 
-### 2. 🤖 AI Chat Assistant  
+### 2. AI Chat Assistant  
 - Context-aware chatbot integrated in every webpage.  
 - Use-cases:  
   - “Summarize this article”  
@@ -38,7 +38,7 @@ With features like *AI Chat Assistant, OCR-based Image Labeling, Text-to-Speech,
 
 ---
 
-### 3. 🖼 AI Image Labeling + OCR  
+### 3. AI Image Labeling + OCR  
 - Detects images without alt text.  
 - Uses *Tesseract.js OCR* (local) or *OpenAI/HuggingFace* (cloud, optional) for captioning.  
 - Provides AI-generated description → User can *edit & apply*.  
@@ -46,7 +46,7 @@ With features like *AI Chat Assistant, OCR-based Image Labeling, Text-to-Speech,
 
 ---
 
-### 4. 🔊 Text-to-Speech (TTS)  
+### 4. Text-to-Speech (TTS)  
 - Reads aloud any text on webpage.  
 - Word-by-word *highlight sync* for dyslexic/blind users.  
 - Multiple voice options (Browser TTS + optional premium voices).  
@@ -54,7 +54,7 @@ With features like *AI Chat Assistant, OCR-based Image Labeling, Text-to-Speech,
 
 ---
 
-### 5. 🎤 Speech-to-Text (STT) / Voice Commands  
+### 5. Speech-to-Text (STT) / Voice Commands  
 - Voice-powered browsing & navigation.  
 - Supported commands:  
   - *Navigation:* “Scroll down”, “Next link”, “Go back”  
@@ -64,14 +64,14 @@ With features like *AI Chat Assistant, OCR-based Image Labeling, Text-to-Speech,
 
 ---
 
-### 6. 🎨 Smart Contrast Fixer  
+### 6. Smart Contrast Fixer  
 - Improves text readability with *WCAG 2.1 AA compliant colors*.  
 - Includes *color-blind presets*: Protanopia, Deuteranopia, Tritanopia.  
 - Preserves brand colors while ensuring accessibility.  
 
 ---
 
-### 7. ⌨ Enhanced Keyboard Navigation  
+### 7. Enhanced Keyboard Navigation  
 - Logical tab order for all focusable elements.  
 - Injects skip links for main content.  
 - Adds *visual focus indicators*.  
