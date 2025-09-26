@@ -84,7 +84,7 @@ With features like **One-Click Global Accessibility Mode, AI Chat Assistant, Ima
 * **Custom profiles** + site-specific overrides
 
 
-## 🏗️ Tech Stack
+## 🔥 Tech Stack
 
 ### 🔹 Core Technologies
 
